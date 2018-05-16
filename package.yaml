@@ -10,9 +10,12 @@ dependencies:
   - Lisp@OffByOneStudios
 
 vendor-dependencies:
-  x86_64-pc-windows-msvccoff: []
-  osx_x64_clang: []
-  debian_x64_gcc: []
+  x86_64-pc-windows-msvccoff:
+    - zmq
+  osx_x64_clang:
+    - zmq
+  debian_x64_gcc:
+    - zmq
 
 platform-dependencies:
   x86_64-pc-windows-msvccoff: []
