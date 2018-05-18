@@ -14,7 +14,7 @@ using namespace cultlang::zmq;
 
 
 
-#define lMM semantics->builtin_implementMultiMethod
+#define lMM sem->builtin_implementMultiMethod
 #define zMq "zmq"
 
 
@@ -23,9 +23,6 @@ instance<Module> cultlang::zmq::make_zmq_bindings(instance<lisp::Namespace> ns, 
 	auto ret = instance<Module>::make(ns, loader);
 	auto sem = instance<CultSemantics>::make(ret);
 	ret->builtin_setSemantics(sem);
-
-	auto semantics = ret->require<CultSemantics>();
-	
 	lMM(zMq, []() { return instance<ZContext>::make(); });
 
 	lMM(zMq, [](instance<ZContext> ctx, instance<std::string> kind, instance<int64_t> port) -> instance<ZSocket>
