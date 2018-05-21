@@ -25,6 +25,7 @@
 // Vendor
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
+#define ZMQ_STATIC
 #include "zmq/zmq.h"
 
 // Deps

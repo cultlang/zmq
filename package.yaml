@@ -11,15 +11,15 @@ dependencies:
 
 vendor-dependencies:
   x86_64-pc-windows-msvccoff:
-    - zmq
+    - libzmq
   x86_64-apple-macosx-macho:
     - zmq
   x86_64-pc-linux-gnu:
     - zmq
 
 platform-dependencies:
-  x86_64-pc-windows-msvccoff: []
-  x86_64-pc-windows-msvccoff: []
+  x86_64-pc-windows-msvccoff:
+    - Iphlpapi.lib
   x86_64-apple-macosx-macho: []
   x86_64-pc-linux-gnu: []
 
